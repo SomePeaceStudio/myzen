@@ -221,13 +221,18 @@ footer a{
 /* ---------------- infographic img ----------------*/
 
 footer::before{
-    content: "Info graf placeholder";
-    vertical-align: middle;
-    text-align: center;
-    color: white;
-    line-height: 200px;
-    background: #FF4747;
+    content: "Who supports the most CSS?";
+    background: #FF4747 url(img/Infographic.png) no-repeat center 80px;
+    /* vertical-align: middle;
+    text-align: center; */
+    font-size: 30px;
+    font-weight: bold;
+    color: #EEEEEE;
+    line-height: 25px;
+    text-align: left;
+    /* background: #FF4747; */
     position: relative;
+    padding: 20px 20px 20px 20px;
     display: block;
     margin: -45px auto 30px auto;
     height: 200px;
