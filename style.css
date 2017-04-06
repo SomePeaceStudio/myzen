@@ -5,7 +5,6 @@ html {
     padding: 0;
     }
 body { 
-    /* font: 75% georgia, sans-serif; */
     line-height: 1.58889;
     font-family: roboto, arial, sans, sans-serif;
     color: #EEEEEE; 
@@ -42,22 +41,34 @@ abbr {
     }
 
 
+
+/*================ custom style ===================*/
+
+/* page settings */
+.page-wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+    /*change element order*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/* ---------------- intro ----------------*/
 header{
     background: #FF4747;
     margin: auto;
     text-align: center;
     position: relative;
-    /* margin-top: 30px; */
     left: 0;
     right: 0;
     width: auto;
     padding: 30px 0px 100px 0px;
 }
-/*
-header:after{
-    content: "";
-    display: box;
-}*/
 
 .intro{
     width: 100%;
@@ -66,7 +77,6 @@ header:after{
     margin-bottom: 0;
     position: relative;
     box-shadow: none;
-    /* width: 100%; */
 }
 .summary p:nth-child(1){
     margin-top: -30px;
@@ -75,16 +85,12 @@ header:after{
     background: #FF8947;
     width: 53%;
     padding-right: 200px;
-    /* box-shadow: 6px 0px 4px -4px black; */
-    /* box-shadow: 3px 3px 10px black; */
 
     -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
     -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
     box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
 
-    /* z-index: 2; */
     position: relative;
-    /* overflow: hidden; */
 }
 
 .summary p:nth-child(2){
@@ -106,6 +112,8 @@ header:after{
 }
 
 
+/* ---------------- links to other zen works ----------------*/
+
 .preamble{
     background: #FF8947;
     margin-top: 0;
@@ -122,17 +130,6 @@ header:after{
     z-index: 2;
     position: relative;
     margin-top: -1px;
-}
-
-/*Change element order*/
-.page-wrapper{
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
 }
 
 .sidebar{
@@ -158,28 +155,14 @@ header:after{
     margin-top: -20px;
     width: 55%;
     background: #FF4747;
-    /* background: #F50000; */
     float: left;
     padding: 20px 0 60px 20px;
-}
-@media(max-width: 975px){
-    .design-selection{
-        margin-top: 50px;
-        width: 55%;
-        background: red;
-        float: left;
-        padding: 70px 0 60px 20px;
-    }
-    .sidebar{
-        margin-top: -30px;
-    }
 }
 
 .design-archives{
     width: 60%;
     padding: 5px 20px;
     background: #C9302C;
-    /* float: right; */
     position: absolute;
     right: 0;
 }
@@ -189,11 +172,12 @@ header:after{
     margin-top: 20px;
     padding: 20px 0 50px 40px;
     background: #FEB547;
-    /* background: #4286EC; */
-    /* float: right; */
     position: absolute;
     right: 0;
 }
+
+
+/* ---------------- main section ----------------*/
 
 .main{
     -webkit-box-ordinal-group: 3;
@@ -216,19 +200,128 @@ header:after{
     margin-left: 60px;
 }
 
+/* ---------------- box shadows for most of elements ----------------*/
+
 .main div, .zen-resources, .design-archives, .zen-resources, .design-selection,.summary p:nth-child(2){
-    /* box-shadow: 3px 3px 10px #111111; */
     -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
     -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
     box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
 }
 
+/* ---------------- footer ----------------*/
 
 footer{
     text-align: center;
     padding: 20px 0;
-    /* background: red; */
 }
 footer a{
     padding: 0 20px;
 }
+
+/* ---------------- infographic img ----------------*/
+
+footer::before{
+    content: "Info graf placeholder";
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    line-height: 200px;
+    background: #FF4747;
+    position: relative;
+    display: block;
+    margin: -45px auto 30px auto;
+    height: 200px;
+    width: 800px;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
+    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+/* ====================== Responsive design styling ====================== */
+
+@media(max-width: 975px){
+    .design-selection{
+        margin-top: 50px;
+        padding: 70px 0 60px 20px;
+    }
+    .sidebar{
+        margin-top: -30px;
+    }
+}
+@media (max-width: 950px) {
+    .design-selection{
+        width: 100%;
+        margin-top: -3px;
+    }
+    .design-archives{
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 20px 20px;
+    }
+    .zen-resources{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: -5px;
+        padding: 20px 20px;
+    }
+    .preamble{
+        padding-bottom: 100px;
+        width: 100%;
+        padding: 0;
+    }
+    .preamble h3{
+        padding: 30px 20px 20px 20px;
+    }
+    .preamble p{
+        padding: 0px 20px 20px 20px;
+    }
+    .preamble p:last-child{
+        padding-bottom: 100px;
+    }
+    .summary{
+        width: 100%;
+        background: #FF8947;
+        -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
+        -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
+        box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.6);
+    }
+    .summary p:nth-child(1){
+        margin: 0;
+        position: relative;
+        box-shadow: none;
+        padding-right: 20px !important;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    .summary p:nth-child(2){
+        margin: 0;
+        position: inherit;
+        float: none;
+        width: auto;
+        padding: 20px 20px;
+    }
+    .main{
+        width: 100%;
+    }
+    .main div {
+        padding: 0px 0px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .main div h3{
+        padding: 60px 20px 20px 20px;
+    }
+    .main div p{
+        padding: 0px 20px 20px 20px;
+    }
+    .main div p:last-child{
+        padding-bottom: 60px;
+    }
+    footer::before{
+        width: 100%;
+    }
+}
+
+
